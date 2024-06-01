@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM task</title>
+  </head>
+  <body>
+    <button
+      onclick="document.querySelector('.text').innerHTML = `You chose: heads`"
+    >
+      heads
+    </button>
+
+    <button
+      onclick="document.querySelector('.text').innerHTML = `You chose: tails`"
+    >
+      tails
+    </button>
+    <p class="text"></p>
+
+    <input placeholder="Name" class="inp" onkeydown="keydown(event)" />
+
+    <button onclick="showName()">Submit</button>
+
+    <p class="name"></p>
+
+    <script>
+      function keydown(event) {
+        if (event.key === "Enter") {
+          showName();
+        }
+      }
+
+      function showName() {
+        const inputElement = document.querySelector(".inp");
+        document.querySelector(
+          ".name"
+        ).innerHTML = `Your name is ${inputElement.value}`;
+      }
+    </script>
+  </body>
+</html>
