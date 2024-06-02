@@ -10,12 +10,11 @@ function render() {
         const todo = todoList[i]
         const { name, dueDate } = todo
         const html = `
-            <p>
-                ${name} ${dueDate}
-                <button class="delete-button" 
-                onclick="todoList.splice(${i}, 1);
-                render()">Delete</button>
-            </p>`
+        <div>${name}</div>
+        <div>${dueDate}</div>
+        <button class="delete-button" 
+            onclick="todoList.splice(${i}, 1);
+            render()">Delete</button>`
         todoListHTML += html
     }
     document.querySelector('.todo-list').innerHTML = todoListHTML
