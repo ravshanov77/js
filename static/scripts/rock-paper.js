@@ -76,9 +76,18 @@ function pickComputerMove() {
   return comMove;
 }
 
+let isPlaying = false,
+  intervalId;
+
 function autoPlay() {
-  setInterval(function() {
-    const playerMove = pickComputerMove()
-    playGame(playerMove)
-  }, 1000)
+  if (!isPlaying) {
+    intervalId = setInterval(function () {
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 700);
+    isPlaying = true;
+  } else {
+    clearInterval(intervalId);
+    isPlaying = false;
+  }
 }
