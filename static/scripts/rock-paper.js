@@ -75,3 +75,10 @@ function pickComputerMove() {
 
   return comMove;
 }
+
+function autoPlay() {
+  setInterval(function() {
+    const playerMove = pickComputerMove()
+    playGame(playerMove)
+  }, 1000)
+}
