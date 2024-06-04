@@ -1,7 +1,5 @@
 function add() {
-  setTimeout(function () {
-    document.querySelector(".added").innerHTML = "Added";
-  }, 2000);
+  document.querySelector(".added").innerHTML = "Added";
   setTimeout(function () {
     document.querySelector(".added").innerHTML = "";
   }, 2000);
