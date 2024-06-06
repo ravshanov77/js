@@ -81,7 +81,7 @@ let isPlaying = false,
 
 function autoPlay() {
   if (!isPlaying) {
-    intervalId = setInterval(function () {
+    intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 700);
