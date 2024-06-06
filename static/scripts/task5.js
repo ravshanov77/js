@@ -18,10 +18,6 @@ function remove() {
   }
 }
 
-// if (msg === 0) {
-//   document.title = "App";
-// }
-
 let msg = 7;
 
 setInterval(function () {
