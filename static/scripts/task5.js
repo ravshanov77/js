@@ -13,8 +13,14 @@ function add() {
 }
 
 function remove() {
-  msg--;
+  if (msg > 1) {
+    msg--;
+  }
 }
+
+// if (msg === 0) {
+//   document.title = "App";
+// }
 
 let msg = 7;
 
