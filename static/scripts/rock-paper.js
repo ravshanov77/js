@@ -4,6 +4,10 @@ let score = JSON.parse(localStorage.getItem("score")) || {
   draws: 0,
 };
 
+document.querySelector(".rock-button").addEventListener("click", () => {
+  playGame("rock");
+});
+
 update();
 
 function playGame(playerMove) {
