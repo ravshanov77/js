@@ -23,6 +23,7 @@ function addNum(arr, num) {
 // console.log(addNum([6, 6, 6, 6], 1));
 
 function removeEgg(food) {
+  let removed = 0;
   return food.filter((food) => food !== "egg");
 }
 
