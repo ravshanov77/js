@@ -24,7 +24,13 @@ function addNum(arr, num) {
 
 function removeEgg(food) {
   let removed = 0;
-  return food.filter((food) => food !== "egg");
+  return food.filter((food) => {
+    if (food === "egg" && removed < 2) {
+      removed++;
+      return false;
+    }
+    return true;
+  });
 }
 
-// console.log(removeEgg(["egg", "apple"]));
+console.log(removeEgg(["egg", "apple", "egg", "egg", "milk"]));
